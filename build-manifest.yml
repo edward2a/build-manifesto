@@ -19,7 +19,7 @@ configFiles:
 # file: a normal file, will be packaged in the final artifact
 # archive: a compressed file archive, will be packaged in the final artifact
 outputArtifacts:
-- docker: <repo-url>/<repo>[:<tag>] # docker container to be pushed
+- docker: <repo-url>/<repo>[:<tag>]
 - archive: myApp.tar.gz
 - archive: myApp_static.tar.gz
 - file: install.sh
