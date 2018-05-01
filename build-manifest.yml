@@ -1,0 +1,28 @@
+---
+# NOTE: paths are relative to the build output directory
+# which is expected to be <workspace|repo>/output
+
+# app details
+appName: myApp
+# semver = <version>-<stage>+<build_id>
+appVersion: 0.0.1-b1+004
+
+# list of config file(s)
+configFiles:
+- file: config.yml
+- file: k8s-pod.yml
+
+# list of output artifact(s)
+# format = type: location
+# types:
+# docker: a container built in the current server; this will be pushed to the target repository
+# file: a normal file, will be packaged in the final artifact
+# archive: a compressed file archive, will be packaged in the final artifact
+outputArtifacts:
+- docker: <repo-url>/<repo>[:<tag>] # docker container to be pushed
+- archive: myApp.tar.gz
+- archive: myApp_static.tar.gz
+- file: install.sh
+- file: service.systemd
+- file: service.sysvinit
+...
